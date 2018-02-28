@@ -82,12 +82,12 @@ public class DubboServiceFactory {
             return "方法参数错误";
         }
 
-        String[] invokeParamTyeps = new String[invokeParamClass.length];
+        String[] invokeParamTypes = new String[invokeParamClass.length];
         for (int i = 0; i < invokeParamClass.length; i++) {
-            invokeParamTyeps[i] = invokeParamClass[i].getName();
+            invokeParamTypes[i] = invokeParamClass[i].getName();
         }
 
-        return genericService.$invoke(methodName, invokeParamTyeps, invokeParams);
+        return genericService.$invoke(methodName, invokeParamTypes, invokeParams);
 
     }
 

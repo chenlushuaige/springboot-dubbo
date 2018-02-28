@@ -50,12 +50,19 @@ public class SampleController {
          * 这些对参数的校验到时候封装一个Util类;
          */
 
+
         if (i - size != 1) {
             return "参数序列错误";
         }
 
         return dubboServiceFactory.genericInvoke(requestDto.getInterfaceName(), requestDto.getMethodName(), paramInfos);
         //return null;
+    }
+
+
+    @RequestMapping("/index")
+    public int getIntCount(){
+        return 100;
     }
 
 }
